@@ -1,0 +1,187 @@
+@import "./index";
+
+
+// Main window view
+.main-container {
+  width: 100vw;
+  position: relative;
+  overflow: hidden;
+}
+
+.gray-box {
+  width: 130vw;
+  height: 250px;
+  background-color: $gray;
+  position: fixed;
+  top: 0;
+  left: -50px;
+  transform: rotate(-4deg);
+  z-index: -1;
+}
+
+.grid-container {
+  margin: 140px 0;
+  display: flex;
+  justify-content: center;
+}
+
+// Search bar
+
+.search-bar {
+  width: 100%;
+  padding: 20px 0;
+  background-color: $gray;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.errorMessage {
+  @extend %description;
+  color: $red;
+  text-align: center;
+}
+
+// Article cards view
+
+.grid-card {
+  display: grid;
+  grid-auto-rows: auto;
+  grid-template-columns: repeat(3, 280px);
+  grid-gap: 30px;
+}
+
+.article-card {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  position: relative;
+  background-color: $white;
+  color: $black;
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: 0 0 5px 5px rgba(159,179,198,0.2);
+  transition: 0.3s ease;
+}
+
+.article-card:hover {
+  box-shadow: 0 0 5px 5px rgba(159,179,198,0.4);
+}
+
+.card-image {
+  width: 100%;
+  height: 180px;
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.card-triangle {
+  width: 120%;
+  height: 30px;
+  background-color: $white;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  transform: rotate(-4deg);
+}
+
+.card-text-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 300px;
+  padding: 20px 5%;
+}
+
+.card-hover {
+  width: 130%;
+  height: 70px;
+  background-color: $gray;
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  transform: rotate(-8deg);
+  opacity: 0;
+  transition: 0.3s ease;
+}
+
+.card-hover-text{
+  @extend %time;
+  text-align: right;
+  margin: 20px 90px 0 0;
+  transform: rotate(8deg);
+}
+
+.article-card:hover .card-hover{
+  opacity: 1;
+}
+
+.article-card-time {
+  @extend %time;
+  text-align: right;
+}
+
+.article-card-title {
+  font-family: $font-title;
+  font-size: 20px;
+  color: $black;
+}
+
+.article-card-text {
+  @extend %description;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.back-menu{
+  margin: 30px 0;
+  text-align: right;
+}
+
+//Home view
+
+.home-title {
+  font-family: $font-title;
+  font-size: 90px;
+  grid-column: 1/4;
+  grid-row: 1/3;
+  animation: fade 2s ease;
+}
+
+@keyframes fade {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+
+//Media
+
+
+@media (max-width: 1000px) {
+  .grid-card {
+    grid-template-columns: repeat(2, 280px);
+  }
+
+  .home-title {
+    font-size: 64px;
+    grid-column: 1;
+    grid-row: 1;
+  }
+}
+
+@media (max-width: 650px) {
+  .grid-card {
+    grid-template-columns: repeat(1, 280px);
+  }
+
+  .home-title {
+    font-size: 36px;
+  }
+}

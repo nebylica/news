@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&family=Lato:wght@300;400&display=swap');
+
+//Primary colors
+$gray: #9fb3c6;
+$black: #1a1a1a;
+$white: #ffffff;
+$red: #e05757;
+
+//Primary Fonts
+$font-title: 'Crimson Text', serif;
+$font-text: 'Lato', sans-serif;
+
+//Text decoration
+%time {
+  font-family: $font-text;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+%description {
+  font-family: $font-text;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+//Body styles
+body {
+  margin: 0;
+  font-family: $font-text;
+  font-size: 16px;
+  font-weight: 300;
+  color: $black;
+}
+
+a {
+  text-decoration: none !important;
+  color: $black !important;
+}
