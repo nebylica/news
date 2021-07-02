@@ -25,7 +25,8 @@ Articles are getted from "GNews" APIs (https://gnews.io).
 git clone https://github.com/nebylica/news.git
 ```
 
-- Front-End:
+- Front-End:  
+
 Go to the project directory
 
 ```
@@ -44,7 +45,8 @@ Run
 npm start
 ```
   
-- Back-end:
+- Back-end:  
+
 Go to the server directory
 
 ```
@@ -58,6 +60,8 @@ Run
 ```
 node server.js
 ```
+
+
 
 
 The application opens in http://localhost:3000/ or any other available port.
