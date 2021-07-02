@@ -30,7 +30,7 @@ git clone https://github.com/nebylica/news.git
 Go to the project directory
 
 ```
-cd gnews
+cd news
 ```
 
 Install dependencies
